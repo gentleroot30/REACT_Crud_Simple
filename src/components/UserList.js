@@ -9,9 +9,12 @@ const UserList = ({ users, onEdit, onDelete }) => {
       ) : (
         <ul className="list-group">
           {users.map((user) => (
-            <li key={user.id} className="list-group-item d-flex justify-content-between align-items-center">
-              {user.name}
-              <div>
+            <li key={user.id} className="list-group-item">
+              <div><strong>Name:</strong> {user.name}</div>
+              <div><strong>Email:</strong> {user.email}</div>
+              <div><strong>Address:</strong> {user.address}</div>
+              <div><strong>Phone:</strong> {user.phone}</div>
+              <div className="mt-2">
                 <button className="btn btn-sm btn-warning me-2" onClick={() => onEdit(user)}>
                   Edit
                 </button>
